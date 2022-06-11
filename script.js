@@ -8,13 +8,13 @@ let menu = {
     trash: null
 };
 // присваивание
-menu[availability] = false;
+menu["availability"] = false;
 
 // получение значения свойства
-alert(menu[totalPrice]); // true
+alert(menu["totalPrice"]);
 
 // удаление свойства
-delete menu[trash];
+delete menu["trash"];
 alert(menu);
 
 let employers = ["John", "Anna", "Robert", "Lucy", "Anton", "Gleb", "Sue"];
@@ -33,9 +33,15 @@ var arrFilter = employers.filter(function(str) {
   
 alert(arrFilter);
 alert(employers.slice(1, 3));
+//map
+var names = ['HTML', 'CSS', 'JavaScript'];
 
-let surnames = "Johan, Pattinson, Bean";
-console.log("Surnames: " + surnames.split(' ').map());
+var nameLengths = names.map(function(name) {
+  return name.length;
+});
+
+// получили массив с длинами
+alert( nameLengths ); // 4,3,10
 
 function showName(firstName, lastName, ...rest) {
     alert(firstName + ' ' + lastName + ' - ' + rest);
